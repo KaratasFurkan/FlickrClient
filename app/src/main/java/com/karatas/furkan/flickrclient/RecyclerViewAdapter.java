@@ -52,7 +52,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .thumbnail(Glide.with(context).load(R.drawable.placeholder))
                 .into(holder.photo);
 
-        holder.photoTitle.setText("elma");
+        holder.photoTitle.setText(photos.get(position).getTitle());
     }
 
     @Override
