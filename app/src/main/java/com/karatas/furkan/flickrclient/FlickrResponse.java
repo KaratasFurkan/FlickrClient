@@ -39,7 +39,7 @@ public class FlickrResponse {
 
         public String generateUrl(){
             return "https://farm" + farm + ".staticflickr.com/" + server + "/" +
-                    id + "_" + secret + "_m.jpg";
+                    id + "_" + secret + ".jpg";
         }
 
         public String getTitle(){
