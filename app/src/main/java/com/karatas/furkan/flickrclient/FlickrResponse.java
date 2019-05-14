@@ -41,5 +41,9 @@ public class FlickrResponse {
             return "https://farm" + farm + ".staticflickr.com/" + server + "/" +
                     id + "_" + secret + "_m.jpg";
         }
+
+        public String getTitle(){
+            return title;
+        }
     }
 }
