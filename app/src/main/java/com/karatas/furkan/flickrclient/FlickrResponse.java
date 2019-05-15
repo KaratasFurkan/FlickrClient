@@ -44,7 +44,7 @@ public class FlickrResponse {
 
         public String generateLargePhotoUrl(){
             return "https://farm" + farm + ".staticflickr.com/" + server + "/" +
-                    id + "_" + secret + "_h.jpg";
+                    id + "_" + secret + "_b.jpg";
         }
 
         public String getTitle(){
