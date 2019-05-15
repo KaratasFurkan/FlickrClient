@@ -4,7 +4,7 @@
 www.flickr.com/services/api/)
 * Ability to search with a set of keywords using the Flickr API
 * Infinite scroll through paginated set of results
-* Full screen preview when a photo is tapped, ability to zoom
+* Full screen preview when a photo is tapped
 
 Libraries I used in this project are:
 
