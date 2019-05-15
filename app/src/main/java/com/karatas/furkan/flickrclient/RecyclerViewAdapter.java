@@ -9,20 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ImageViewHolder> {
     private List<FlickrResponse.Photo> photos;
     private Context context;
+    private View.OnClickListener onItemClickListener;
 
     public RecyclerViewAdapter(List<FlickrResponse.Photo> photos, Context context) {
         this.photos = photos;
         this.context = context;
     }
 
-    public static class ImageViewHolder extends RecyclerView.ViewHolder {
+    public class ImageViewHolder extends RecyclerView.ViewHolder {
 
         ImageView photo;
         TextView photoTitle;
@@ -30,6 +30,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(v);
             photo = v.findViewById(R.id.photo);
             photoTitle = v.findViewById(R.id.photo_title);
+            v.setTag(this);
+            v.setOnClickListener(onItemClickListener);
         }
     }
 
@@ -60,5 +62,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return photos.size();
     }
 
-
+    public void setOnItemClickListener(View.OnClickListener itemClickListener) {
+        onItemClickListener = itemClickListener;
+    }
 }
